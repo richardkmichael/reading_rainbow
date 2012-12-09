@@ -1,0 +1,11 @@
+one:
+  title: A First Book
+  author: Some Person
+  has_been_read: false
+  on_current_list: false
+
+two:
+  title: A Second Book
+  author: Another Person
+  has_been_read: false
+  on_current_list: false

@@ -1,0 +1,18 @@
+defaults: &defaults
+  encoding: unicode
+  adapter: postgresql
+  username: rails
+  password: rails
+  pool: 5
+
+development:
+  <<: *defaults
+  database: reading_rainbow_development
+
+test:
+  <<: *defaults
+  database: reading_rainbow_test
+
+production:
+  <<: *defaults
+  database: reading_rainbow_production
