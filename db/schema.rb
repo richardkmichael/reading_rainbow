@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209132436) do
+ActiveRecord::Schema.define(:version => 20130213163222) do
 
   create_table "books", :force => true do |t|
     t.string   "title",                              :null => false
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(:version => 20121209132436) do
     t.boolean  "on_current_list", :default => false
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
+  end
+
+  create_table "carrier_wave_files", :force => true do |t|
+    t.string   "identifier"
+    t.string   "original_filename"
+    t.string   "content_type"
+    t.string   "size"
+    t.binary   "data"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end
