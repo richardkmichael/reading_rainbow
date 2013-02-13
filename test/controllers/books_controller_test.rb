@@ -9,7 +9,7 @@ class BooksControllerTest < ActionController::TestCase
     assert_equal Book.count, books.count
   end
 
-  test "it should create a new book" do
+  test "it should assign a new book" do
     get :new
     assert_response :success
 

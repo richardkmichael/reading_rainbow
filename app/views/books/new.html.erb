@@ -12,6 +12,9 @@
     <%= form_control_formatter( book.label(:author),
                                 book.text_field(:author, { placeholder: 'An author...'}) ) %>
 
+    <%= form_control_formatter( book.label(:cover, 'Cover Image'),
+                                book.file_field(:cover) ) %>
+
     <%= form_control_formatter( book.label(:has_been_read, 'Has been read?'),
                                 book.check_box(:has_been_read) ) %>
 

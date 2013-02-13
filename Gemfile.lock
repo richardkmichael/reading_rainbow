@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/richardkmichael/carrierwave-activerecord.git
-  revision: 055d39b87ed15489987ce9159b6b8940a822a3d2
-  tag: 0.1.0rc5
+  revision: c2f7718ffa6bc25a5bde4cc204ed60ef29c90b1c
+  tag: 0.1.0rc6
   specs:
-    carrierwave-activerecord (0.1.0rc5)
+    carrierwave-activerecord (0.1.0rc6)
       activerecord (~> 3.2.0)
       carrierwave (~> 0.8.0)
 
