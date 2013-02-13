@@ -2,7 +2,9 @@ class BooksController < ApplicationController
 
   respond_to :html
 
-  def index; end
+  def index
+    @books = Book.all
+  end
 
   def new
     @book = Book.new
@@ -13,8 +15,10 @@ class BooksController < ApplicationController
     respond_with @book
   end
 
-  def show; end
+  def show
+    @book = Book.find_by_id params[:id]
+  end
 
-  def edit; end
+# def edit; end
 
 end

@@ -1,19 +1,29 @@
-<h1>Add a book</h1>
+<div class='container'>
 
-<%= form_for @book, :html => { :class => 'form-horizontal' } do |book| %>
+  <div class='header'>
+    <h1>Add a book</h1>
+  </div>
 
-  <%= book.label      :title %>
-  <%= book.text_field :title %>
+  <%= form_for @book, :html => { :class => 'form-horizontal' } do |book| %>
 
-  <%= book.label      :author %>
-  <%= book.text_field :author %>
+    <%= form_control_formatter( book.label(:title),
+                                book.text_field(:title, { placeholder: 'A title...'}) ) %>
 
-  <%= book.label     :has_been_read, 'Has been read?' %>
-  <%= book.check_box :has_been_read %>
+    <%= form_control_formatter( book.label(:author),
+                                book.text_field(:author, { placeholder: 'An author...'}) ) %>
 
-  <%= book.label     :on_current_list, 'On current list?' %>
-  <%= book.check_box :on_current_list %>
+    <%= form_control_formatter( book.label(:has_been_read, 'Has been read?'),
+                                book.check_box(:has_been_read) ) %>
 
-  <%= book.submit 'Add book' %>
+    <%= form_control_formatter( book.label(:on_current_list, 'On current list?'),
+                                book.check_box(:on_current_list) ) %>
 
-<% end %>
+   <div class='controls'>
+    <div class='input-prepend'>
+      <span class='add-on'><i class='icon-book'></i></span>
+      <%= book.submit 'Add book'%>
+    </div>
+  </div>
+
+  <% end %>
+</div>

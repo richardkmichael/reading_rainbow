@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'bootstrap-sass'
+gem 'carrierwave'
 gem 'carrierwave-activerecord', github: 'richardkmichael/carrierwave-activerecord', tag: '0.1.0rc2'
 gem 'jquery-rails'
 gem 'pg'
@@ -15,6 +16,16 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'minitest'
+  gem 'minitest-rails'
   gem 'pry'
+  gem 'pry-debugger'
   gem 'pry-stack_explorer'
+
+  # File system events for Guard, not on all platforms.
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
 end
