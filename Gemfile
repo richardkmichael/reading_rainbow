@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'bootstrap-sass'
 gem 'carrierwave'
-gem 'carrierwave-activerecord', github: 'richardkmichael/carrierwave-activerecord', tag: '0.1.0rc4'
+gem 'carrierwave-activerecord', github: 'richardkmichael/carrierwave-activerecord', tag: '0.1.0rc5'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails'
