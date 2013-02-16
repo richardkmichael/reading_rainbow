@@ -1,10 +1,8 @@
 <div class='container'>
 
-  <div class='header'>
-    <h1>Add a book</h1>
-  </div>
-
   <%= form_for @book, :html => { :class => 'form-horizontal' } do |book| %>
+
+    <h2>Add a book</h2>
 
     <%= form_control_formatter( book.label(:title),
                                 book.text_field(:title, { placeholder: 'A title...'}) ) %>
@@ -21,12 +19,9 @@
     <%= form_control_formatter( book.label(:on_current_list, 'On current list?'),
                                 book.check_box(:on_current_list) ) %>
 
-   <div class='controls'>
-    <div class='input-prepend'>
-      <span class='add-on'><i class='icon-book'></i></span>
-      <%= book.submit 'Add book'%>
+    <div class='controls'>
+      <%= book.button_with_icon :book, 'Add book', { class: 'btn btn-primary', type: 'submit' } %>
     </div>
-  </div>
 
   <% end %>
 </div>

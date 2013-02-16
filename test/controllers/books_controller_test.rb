@@ -1,6 +1,7 @@
 require 'minitest_helper'
 
 class BooksControllerTest < ActionController::TestCase
+
   test "it should show all books" do
     get :index
     assert_response :success
@@ -18,11 +19,11 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_blank book.title,           'Expected a new book to have an empty title.'
     assert_blank book.author,          'Expected a new book to have an empty author.'
+    assert_blank book.cover,           'Expected a new book to have an empty cover image.'
     refute       book.has_been_read,   'Expected a new book to be unread.'
     refute       book.on_current_list, 'Expected a new book to not be on the current reading list.'
 
-    # Auth token, four attributes, two hidden checkboxes, and the submit button.
-    assert_select 'form input', 8
+    assert_select 'input[type=submit]', true, 'Expected a submit button.'
   end
 
   test "it should create a new book" do

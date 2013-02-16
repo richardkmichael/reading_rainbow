@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-  background: lightblue;
+body {
+  padding-top: 20px;
+  background-color: #f5f5f5;
 }
 
-.header {
+.container {
+  border: 1px solid grey;
+  background: lightblue;
+  border-radius: 10px;
+  max-width: 30%;
+}
+
+h2 {
   text-align: center;
 }
